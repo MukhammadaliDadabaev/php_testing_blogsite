@@ -23,6 +23,8 @@ $res = $sql_header->fetch(PDO::FETCH_OBJ);
 <?php require "public/about.php" ?>
 <?php require "public/footer.php" ?>
 
+</body>
+</html>
 
     
     
