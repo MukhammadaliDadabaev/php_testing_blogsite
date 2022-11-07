@@ -1,5 +1,5 @@
 <?php
-require_once '../connect.php';
+require_once '../function/connect.php';
 session_start();
 
 $login = $_POST["login"];

@@ -1,7 +1,7 @@
 <?php
 require "public/contact.php";
 
-require_once './connect.php';
+require_once './function/connect.php';
 
 $sql_header = $pdo->prepare("SELECT * FROM header");
 $sql_header->execute();

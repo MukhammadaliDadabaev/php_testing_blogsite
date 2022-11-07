@@ -1,5 +1,5 @@
 <?php
-require_once './connect.php';
+require_once './function/connect.php';
 
 $sql_contact = $pdo->prepare("SELECT * FROM contact");
 $sql_contact->execute();

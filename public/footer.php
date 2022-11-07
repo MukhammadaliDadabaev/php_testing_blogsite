@@ -1,4 +1,4 @@
-<?php require_once './connect.php';
+<?php require_once './function/connect.php';
 
 $sql_footer = $pdo->prepare("SELECT * FROM footer");
 $sql_footer->execute();

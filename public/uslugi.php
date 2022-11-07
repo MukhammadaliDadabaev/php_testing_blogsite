@@ -1,4 +1,4 @@
-<?php require_once './connect.php';
+<?php require_once './function/connect.php';
 
 $sql_uslug = $pdo->prepare("SELECT * FROM uslugi");
 $sql_uslug->execute();
