@@ -19,7 +19,8 @@ $uslugi = $sql_uslug->fetchAll(PDO::FETCH_OBJ);
               <div class="col-lg-3 col-md-6 mb-lg-0">
                   <div class="person">
                       <figure>
-                          <img src="images/<?php echo $usluga->filename ?>" alt="Image" class="img-fluid">
+                          <img class="img-fluid" src="admin/img/<?php echo $usluga->filename ?>" alt="Image"
+                               style="height: 240px">
                       </figure>
                       <div class="person-contents">
                           <h3><?php echo $usluga->title ?></h3>

@@ -36,7 +36,7 @@ $res = $sql->fetch(PDO::FETCH_OBJ);
           <input type="submit" class="btn btn-primary" name="save" value="Saqlash">
       </form>
   <div class="card-body">
-      <img src="about/img/<?php echo $res->filename ?>" alt="logo">
+      <img src="/img/<?php echo $res->filename ?>" alt="logo">
   </div>
 
   <?php else:

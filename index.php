@@ -9,7 +9,7 @@ $res = $sql_header->fetch(PDO::FETCH_OBJ);
 
 ?>
 
-<div class="intro-section" style="background-image: url('images/<?php echo $res->filename ?>');">
+<div class="intro-section" style="background-image: url('/admin/img/<?php echo $res->filename ?>');">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">

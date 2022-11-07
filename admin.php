@@ -21,7 +21,7 @@
         <br>
         <a class="m-3" href="/admin/contact.php">Contact</a>
         <a class="m-3" href="">Header</a>
-        <a class="m-3" href="">Uslugi</a>
+        <a class="m-3" href="/admin/uslugi.php">Uslugi</a>
         <a class="m-3" href="/admin/about.php">About</a>
     <?php else:
         echo "<h1>Вы что хакер</h1>";

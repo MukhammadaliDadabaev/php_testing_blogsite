@@ -17,9 +17,14 @@ if (isset($_POST["save"])) {
 }
 //---> UPDATE-CONTACT
 $title = $_POST["title"];
-$description = $_POST["description"];
+$price = $_POST["price"];
 
-$sql = "UPDATE about SET title=:title, description=:description,filename=:filename";
+//CARD-IMG QO'SHISH
+$url = $_SERVER['REQUEST_URI'];
+$url = explode('/', $url);
+$str = $url[4];
+
+$sql = "UPDATE uslugi SET title=:title, price=:price,filename=:filename WHERE id=$str";
 $query = $pdo->prepare($sql);
-$query->execute(["title" => $title, "description" => $description, "filename" => $_FILES['im']['name']]);
-echo '<meta HTTP-EQUTV="Refresh" Content="0; URL=/admin/about.php">';
+$query->execute(["title" => $title, "price" => $price, "filename" => $_FILES['im']['name']]);
+//echo '<meta HTTP-EQUTV="Refresh" Content="0; URL=/admin/uslugi.php">';
