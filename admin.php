@@ -15,7 +15,6 @@
 
     <?php if (!empty($_SESSION["login"])) : ?>
 
-        <?php echo "Bu admin-page-> " . $_SESSION["login"]; ?>
         <br>
         <a href="/logout.php">CHIQISH</a>
         <br>

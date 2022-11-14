@@ -11,7 +11,7 @@ $res = $sql_about->fetch(PDO::FETCH_OBJ);
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="/admin/img/" alt="Image" class="img-fluid">
+                <img src="/admin/img/<?php echo $res->filename ?>" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-6">
                 <h3 class="text-dark"><?php echo $res->title ?></h3>

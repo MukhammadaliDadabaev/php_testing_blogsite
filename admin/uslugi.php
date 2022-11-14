@@ -14,13 +14,11 @@ require_once '../function/connect.php';
 </head>
 <body>
 <div class="text-center mt-3">
-    <h1>To'lovlar Haqida</h1>
+    <h1>Card To'lovlar Haqida</h1>
 
   <?php if (!empty($_SESSION["login"])) : ?>
 
-      <!--    --><?php //echo "Bu admin-page-> " . $_SESSION["login"]; ?>
-      <br>
-      <a href="/logout.php">CHIQISH</a>
+      <a class="mr-3 float-right btn btn-primary" href="/logout.php">CHIQISH</a>
       <br>
 
     <?php
@@ -29,16 +27,17 @@ require_once '../function/connect.php';
     while ($res = $sql->fetch(PDO::FETCH_OBJ)):?>
 
         <form action="/admin/uslugi/uslugi.php/<?php echo $res->id ?>" method="post" enctype="multipart/form-data">
-          <?php echo $res->id ?><br>
+            <h3 class="float-left ml-3"> <?php echo $res->id ?>. Card<br></h3>
             <input class="m-3" type="text" name="title" value="<?php echo $res->title ?>">
             <input class="m-3" type="text" name="price" value="<?php echo $res->price ?>">
-            <p>
-                <input type="file" name="im">
-            </p>
+
+            <input type="file" name="img">
             <input type="submit" class="btn btn-primary" name="save" value="Saqlash">
+
         </form>
         <div class="card-body">
-            <img src="/img/<?php echo $res->filename ?>" alt="logo">
+            <img class="img-fluid w-50" src="./img/<?php echo $res->filename ?>" alt="logo">
+            <hr class="border">
         </div>
 
     <?php endwhile; ?>

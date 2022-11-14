@@ -1,13 +1,6 @@
 <?php '../../function/connect.php';
-//-----------> DB-MySql
-//$user = "root";
-//$password = "";
-//$host = "localhost";
-//$db = "testing_blog";
-//$dbh = 'mysql:host=' . $host . ';dbname=' . $db . ';charset=utf8';
-//$pdo = new PDO($dbh, $user, $password);
 
-////---> UPDATE-CONTACT
+//---> UPDATE-CONTACT
 $city = $_POST["city"];
 $phone = $_POST["phone"];
 $email = $_POST["email"];

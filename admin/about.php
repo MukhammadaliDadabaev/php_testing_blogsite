@@ -19,25 +19,22 @@ $res = $sql->fetch(PDO::FETCH_OBJ);
 </head>
 <body>
 <div class="text-center mt-3">
-    <h1>Aloqa ma'lumotlar Haqida</h1>
+    <h1>Aloqa ma'lumotlar Qo'shish</h1>
 
   <?php if (!empty($_SESSION["login"])) : ?>
 
-      <!--    --><?php //echo "Bu admin-page-> " . $_SESSION["login"]; ?>
-      <br>
-      <a href="/logout.php">CHIQISH</a>
+      <a class="mr-3 float-right btn btn-primary" href="/logout.php">CHIQISH</a>
       <br>
       <form action="/admin/about/about.php" method="post" enctype="multipart/form-data">
           <input class="m-3" type="text" name="title" value="<?php echo $res->title ?>">
           <input class="m-3" type="text" name="description" value="<?php echo $res->description ?>">
-          <p>
-              <input type="file" name="im">
-          </p>
+
+          <input type="file" name="img">
           <input type="submit" class="btn btn-primary" name="save" value="Saqlash">
       </form>
-  <div class="card-body">
-      <img src="/img/<?php echo $res->filename ?>" alt="logo">
-  </div>
+      <div class="card-body">
+          <img class="img-fluid w-75" src="./img/<?php echo $res->filename ?>" alt="logo">
+      </div>
 
   <?php else:
     echo "<h1>Вы что хакер</h1>";

@@ -32,7 +32,7 @@ $res = $sql_contact->fetch(PDO::FETCH_ASSOC);
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6 col-lg-3">
-                    <a href="index.html">
+                    <a href="/login.php">
                         <span class="text-dark font-weight-bold">Логотип</span>
                     </a>
                 </div>
