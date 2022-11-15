@@ -9,13 +9,6 @@ $statement = $pdo->prepare($sql);
 $statement->execute(['email' => $email]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-////---> BU EMAILNI-BO'SHLIGINI TEKSHIRADI
-//if (isset($user) < 0) {
-//  $_SESSION['error'] = "Login yoki parol noto'gri";
-//  header("Location:/login.php");
-//  exit;
-//}
-
 //---> BU EMAILNI-TEKSHIRADI
 if (empty($user)) {
   $_SESSION['error'] = "Login yoki parol noto'gri";

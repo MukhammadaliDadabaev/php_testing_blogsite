@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php session_start();
+require_once './function/connect.php';
+
+$id = $_GET['id'];
+$sql = "SELECT * FROM registir WHERE id=:id";
+$statement = $pdo->prepare($sql);
+$statement->execute(['id' => $id]);
+$user = $statement->fetch(PDO::FETCH_ASSOC);
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -17,7 +26,7 @@
             <h1 class="text-center m-5">Foydalanuvchini o'zgartirish</h1>
             <form action="admin/update.php?id=<?php echo $id; ?>" method="post">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1">Email manzil</label>
                     <input type="email" class="form-control" name="email" value="<?php echo $user['email']; ?>"
                            placeholder="Email kiriting"
                            id="exampleInputEmail1" aria-describedby="emailHelp">
